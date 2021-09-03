@@ -11,8 +11,8 @@ import time
 from cobaya.likelihoods._base_classes import _DataSetLikelihood
 from cobaya.log import LoggedError
 from getdist import IniFile
-#FLAG?
-import cosmolike_des_y3_interface as ci
+
+import cosmolike_kids_interface as ci
 
 # default is best fit LCDM - just need to be an ok Cosmology
 default_omega_matter = 0.315
@@ -381,12 +381,11 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
   # ------------------------------------------------------------------------
   # --------------------------- baryonic PCAs ------------------------------
   # ------------------------------------------------------------------------
-#FLAG?
   def set_baryon_related(self, **params_values):
-    self.baryon_pcs_qs[0] = params_values.get("DES_BARYON_Q1", None)
-    self.baryon_pcs_qs[1] = params_values.get("DES_BARYON_Q2", None)
-    self.baryon_pcs_qs[2] = params_values.get("DES_BARYON_Q3", None)
-    self.baryon_pcs_qs[3] = params_values.get("DES_BARYON_Q4", None)
+    self.baryon_pcs_qs[0] = params_values.get("KIDS_BARYON_Q1", None)
+    self.baryon_pcs_qs[1] = params_values.get("KIDS_BARYON_Q2", None)
+    self.baryon_pcs_qs[2] = params_values.get("KIDS_BARYON_Q3", None)
+    self.baryon_pcs_qs[3] = params_values.get("KIDS_BARYON_Q4", None)
     
   def add_baryon_pcs_to_datavector(self, datavector):    
     return datavector[:] + self.baryon_pcs_qs[0]*self.baryon_pcs[:,0] \
