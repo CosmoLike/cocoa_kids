@@ -1,5 +1,5 @@
-from cobaya.likelihoods.des_y3._cosmolike_prototype_base import _cosmolike_prototype_base
-import cosmolike_des_y3_interface as ci
+from cobaya.likelihoods.kids._cosmolike_prototype_base import _cosmolike_prototype_base
+import cosmolike_kids_interface as ci
 import numpy as np
 
 class des_cosmic_shear(_cosmolike_prototype_base):
