@@ -20,8 +20,7 @@ fi
 # ----------------------------- COMPILE COSMOLIKE ----------------------------
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
-#FLAG--I changed name but not sure if it's the right path
-cd $ROOTDIR/projects/cocoa_kids/interface
+cd $ROOTDIR/projects/kids/interface
 
 make -f MakefileCosmolike clean
 
