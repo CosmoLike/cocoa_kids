@@ -20,7 +20,7 @@ echo Slurm job ID is $SLURM_JOBID
 
 cd $SLURM_SUBMIT_DIR
 source start_cocoa
-##FLAG--filepath?
+
 export OMP_PROC_BIND=close
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-mpirun -n 1 cobaya-run ./projects/cocoa_kids/EXAMPLE_POST${SLURM_ARRAY_TASK_ID}.yaml -r
+mpirun -n 1 cobaya-run ./projects/kids/EXAMPLE_POST${SLURM_ARRAY_TASK_ID}.yaml -r
