@@ -8,10 +8,10 @@ fi
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
-##FLAG --filename, twice below
-addvar LD_LIBRARY_PATH $ROOTDIR/projects/cocoa_kids/interface
 
-addvar PYTHONPATH $ROOTDIR/projects/cocoa_kids/interface
+addvar LD_LIBRARY_PATH $ROOTDIR/projects/kids/interface
+
+addvar PYTHONPATH $ROOTDIR/projects/kids/interface
 
 if [ -n "${COSMOLIKE_DEBUG_MODE}" ]; then
     export SPDLOG_LEVEL=debug
