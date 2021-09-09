@@ -3,8 +3,8 @@ debug: True
 stop_at_error: True
 
 likelihood:
-  des_y3.des_cosmic_shear:
-    path: ./external_modules/data/des_y3
+  kids.kids_cosmic_shear:
+    path: ./external_modules/data/kids
 
 params:
   As_1e9:
@@ -130,6 +130,19 @@ params:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
 
+  DES_BARYON_Q1:
+    value: 0.0
+    latex: BQ1_\mathrm{DES}^1
+  DES_BARYON_Q2:
+    value: 0.0
+    latex: BQ2_\mathrm{DES}^2
+  DES_BARYON_Q3:
+    value: 0.0
+    latex: BQ3_\mathrm{DES}^3
+  DES_BARYON_Q4:
+    value: 0.0
+    latex: BQ4_\mathrm{DES}^4
+
 theory:
   camb:
     path: ./external_modules/code/CAMB
@@ -159,10 +172,10 @@ sampler:
       DES_DZ_S2: 0.00147332
       DES_DZ_S3: 0.0237035
       DES_DZ_S4: -0.0773436
-      DES_M1: 0.0191832
-      DES_M2: -0.0431752
-      DES_M3: -0.034961
-      DES_M4: -0.0158096
+      DES_M1: 0.0
+      DES_M2: 0.0
+      DES_M3: 0.0
+      DES_M4: 0.0
       DES_A1_1: 0.606102
       DES_A1_2: -1.51541
       DES_A2_1: -1.73583
@@ -171,4 +184,4 @@ sampler:
       w: -0.9
       wa: 0.0
 
-output: ./projects/des_y3/chains/EXAMPLE_EVALUATE1
+output: ./projects/kids/chains/EXAMPLE_EVALUATE1
