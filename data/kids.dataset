@@ -1,0 +1,13 @@
+data_file = 
+cov_file = covtot2.txt
+mask_file = ?.mask?
+nz_lens_file = KiDS_NofZ_2.txt
+nz_source_file = KiDS_NofZ_2.txt
+lensing_overlap_cut = 0.0015
+lens_ntomo = 5
+source_ntomo = 5
+n_theta = 9
+IA_model = 6
+theta_min_arcmin = 0.5
+theta_max_arcmin = 300.
+baryon_pca_file = pca.txt
