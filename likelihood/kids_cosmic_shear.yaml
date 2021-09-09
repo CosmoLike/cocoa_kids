@@ -1,5 +1,5 @@
 path: null
-#does this exist?? what format are the inputs supposed to be in?
+#this exists now but not all the input files are filled in. what format are the inputs supposed to be in?
 data_file: KiDS.dataset
 acc: 1
 speed: 3
