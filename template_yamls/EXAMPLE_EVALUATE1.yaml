@@ -129,19 +129,17 @@ params:
   omegan:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
+  BARYON_Q1:
+    prior:
+      min: -3
+      max: 9
+    ref:
+      dist: norm
+      loc: 3
+      scale: 5
+    proposal: 1
+    latex: BQ1_\mathrm{KiDS}^1
 
-  DES_BARYON_Q1:
-    value: 0.0
-    latex: BQ1_\mathrm{DES}^1
-  DES_BARYON_Q2:
-    value: 0.0
-    latex: BQ2_\mathrm{DES}^2
-  DES_BARYON_Q3:
-    value: 0.0
-    latex: BQ3_\mathrm{DES}^3
-  DES_BARYON_Q4:
-    value: 0.0
-    latex: BQ4_\mathrm{DES}^4
 
 theory:
   camb:
@@ -168,19 +166,19 @@ sampler:
       omegab: 0.04
       omegam: 0.3
       mnu: 0.06
-      DES_DZ_S1: 0.0414632
-      DES_DZ_S2: 0.00147332
-      DES_DZ_S3: 0.0237035
-      DES_DZ_S4: -0.0773436
-      DES_M1: 0.0
-      DES_M2: 0.0
-      DES_M3: 0.0
-      DES_M4: 0.0
-      DES_A1_1: 0.606102
-      DES_A1_2: -1.51541
-      DES_A2_1: -1.73583
-      DES_A2_2: -2.91558
-      DES_BTA_1: 0.930588
+      DZ_S1: 0.0414632
+      DZ_S2: 0.00147332
+      DZ_S3: 0.0237035
+      DZ_S4: -0.0773436
+      M1: 0.0
+      M2: 0.0
+      M3: 0.0
+      M4: 0.0
+      A1_1: 0.606102
+      A1_2: -1.51541
+      A2_1: -1.73583
+      A2_2: -2.91558
+      BTA_1: 0.930588
       w: -0.9
       wa: 0.0
 
