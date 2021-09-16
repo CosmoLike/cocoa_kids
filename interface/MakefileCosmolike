@@ -117,7 +117,7 @@ endif
 LDFLAGS += -lm
 
 all:  shared
-shared: cosmolike_des_y3_interface.so
+shared: cosmolike_kids_interface.so
 #FLAG?
 CSOURCES += \
 		${ROOTDIR}/external_modules/code/cfftlog/cfftlog.c \
