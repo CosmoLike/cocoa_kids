@@ -1,7 +1,7 @@
 #define ARMA_DONT_USE_WRAPPER
+#include <carma.h>
 #include <armadillo>
 #include <map>
-#include <carma/carma.h>
 
 #ifndef __COSMOLIKE_INTERFACE_HPP
 #define __COSMOLIKE_INTERFACE_HPP
