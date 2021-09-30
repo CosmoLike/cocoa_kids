@@ -1,6 +1,6 @@
 path: null
 #does this exist?? what format are the inputs supposed to be in?
-data_file: KiDS.dataset
+data_file: kids.dataset
 acc: 1
 speed: 3
 
@@ -10,8 +10,7 @@ use_baryonic_simulations_for_dv_contamination: False
 which_baryonic_simulations_for_dv_contamination: TNG100
 
 create_baryon_pca: True
-#baryon_pca_select_simulations: TNG100/HzAGN/mb2/illustris/eagle/owls_AGN_T80/owls_AGN_T85/owls_AGN_T87/BAHAMAS_T76/BAHAMAS_T78/BAHAMAS_T80
 baryon_pca_select_simulations: TNG100/HzAGN/mb2/illustris/eagle/owls_AGN_T80/owls_AGN_T85/owls_AGN_T87/BAHAMAS_T76/BAHAMAS_T78/BAHAMAS_T80
 filename_baryon_pca: "./project/kids"
 
-params:!defaults [params_kids_cosmic_shear]
+params: !defaults [params_kids_cosmic_shear]

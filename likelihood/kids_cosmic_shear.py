@@ -2,13 +2,13 @@ from cobaya.likelihoods.kids._cosmolike_prototype_base import _cosmolike_prototy
 import cosmolike_kids_interface as ci
 import numpy as np
 
-class des_cosmic_shear(_cosmolike_prototype_base):
+class kids_cosmic_shear(_cosmolike_prototype_base):
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
 
   def initialize(self):
-    super(des_cosmic_shear,self).initialize(probe="xi")
+    super(kids_cosmic_shear,self).initialize(probe="xi")
 
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
