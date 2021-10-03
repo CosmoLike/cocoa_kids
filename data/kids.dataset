@@ -1,5 +1,5 @@
 data_file = kids_dr4_shear_data.txt
-cov_file = covtot2.txt
+cov_file = kids_cov_ordered.txt
 mask_file = kids_cosmic_shear.mask
 nz_lens_file = KiDS_NofZ_2.txt
 nz_source_file = KiDS_NofZ_2.txt
