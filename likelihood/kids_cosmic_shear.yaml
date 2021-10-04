@@ -1,5 +1,4 @@
 path: null
-#does this exist?? what format are the inputs supposed to be in?
 data_file: kids.dataset
 acc: 1
 speed: 3
