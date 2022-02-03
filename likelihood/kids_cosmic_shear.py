@@ -36,4 +36,10 @@ class kids_cosmic_shear(_cosmolike_prototype_base):
       self.set_baryon_related(**params_values)
       datavector = self.add_baryon_pcs_to_datavector(datavector)
 
+    # PRINT DATAVECTOR
+    print(datavector)
+
+    # SAVE DATAVECTOR
+    np.savetxt("./projects/kids/data/kids_model_max",datavector)
+
     return self.compute_logp(datavector)
