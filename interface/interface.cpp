@@ -1946,7 +1946,7 @@ std::string ima::BaryonScenario::get_scenario(const int i) const
 
 PYBIND11_MODULE(cosmolike_kids_interface, m)
 {
-  m.doc() = "CosmoLike Interface for DES-Y3 3x2 Module";
+  m.doc() = "CosmoLike Interface for DES-Y1 & KIDS 3x2 Module";
 
   // --------------------------------------------------------------------
   // --------------------------------------------------------------------
