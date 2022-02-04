@@ -1,14 +1,10 @@
 data_file = kids_dr4_shear_data.txt
 cov_file = kids_cov_ordered.txt
 mask_file = kids_cosmic_shear.mask
-nz_lens_file = KiDS_NofZ_2.txt
 nz_source_file = KiDS_NofZ_2.txt
-lensing_overlap_cut = 0.00
-lens_ntomo = 0
 source_ntomo = 5
 n_theta = 9
 IA_model = 5
 theta_min_arcmin = 0.5
 theta_max_arcmin = 300.
-baryon_pca_file = 
-#pca.txt
+baryon_pca_file =

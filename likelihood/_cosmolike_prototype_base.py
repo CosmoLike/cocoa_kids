@@ -87,13 +87,9 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
 
     self.mask_file = ini.relativeFileName('mask_file')
 
-    self.lens_file = ini.relativeFileName('nz_lens_file')
-
     self.source_file = ini.relativeFileName('nz_source_file')
 
-    self.ggl_olap_cut = ini.float("lensing_overlap_cut")
-
-    self.lens_ntomo = ini.int("lens_ntomo") #5
+    self.lens_ntomo = ini.int("lens_ntomo", default = -1) #5
 
     self.source_ntomo = ini.int("source_ntomo") #4
 
@@ -146,7 +142,12 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
 
     ci.init_source_sample(self.source_file, self.source_ntomo)
 
-    ci.init_lens_sample(self.lens_file, self.lens_ntomo, self.ggl_olap_cut)
+    if (self.lens_ntomo > 0):
+      self.lens_file = ini.relativeFileName('nz_lens_file')
+      self.ggl_olap_cut = ini.float("lensing_overlap_cut")
+      ci.init_lens_sample(self.lens_file, self.lens_ntomo, self.ggl_olap_cut)
+    else:
+      self.lens_ntomo = 0
 
     ci.init_size_data_vector()
 

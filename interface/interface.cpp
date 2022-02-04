@@ -401,15 +401,13 @@ void cpp_init_size_data_vector()
 
   if (tomo.shear_Nbin == 0)
   {
-    spdlog::critical("{}: {} not set prior to this function call",
+    spdlog::debug("{}: {} not set prior to this function call",
       "init_size_data_vector", "tomo.shear_Nbin");
-    exit(1);
   }
   if (tomo.clustering_Nbin == 0)
   {
-    spdlog::critical("{}: {} not set prior to this function call",
+    spdlog::debug("{}: {} not set prior to this function call",
       "init_size_data_vector", "tomo.clustering_Nbin");
-    exit(1);
   }
   if (like.Ntheta == 0)
   {
@@ -1044,15 +1042,13 @@ std::vector<double> cpp_compute_data_vector_masked()
 
   if (tomo.shear_Nbin == 0)
   {
-    spdlog::critical("\x1b[90m{}\x1b[0m: {} = 0 is invalid",
+    spdlog::debug("\x1b[90m{}\x1b[0m: {} = 0 is invalid",
       "compute_data_vector_masked", "shear_Nbin");
-    exit(1);
   }
   if (tomo.clustering_Nbin == 0)
   {
-    spdlog::critical("\x1b[90m{}\x1b[0m: {} = 0 is invalid",
+    spdlog::debug("\x1b[90m{}\x1b[0m: {} = 0 is invalid",
       "compute_data_vector_masked", "clustering_Nbin");
-    exit(1);
   }
   if (like.Ntheta == 0)
   {
