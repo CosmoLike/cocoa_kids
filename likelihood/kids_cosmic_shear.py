@@ -40,6 +40,6 @@ class kids_cosmic_shear(_cosmolike_prototype_base):
     print(datavector)
 
     # SAVE DATAVECTOR
-    np.savetxt("./projects/kids/data/kids_model_max",datavector)
+    np.savetxt("./projects/kids/data/kids_theory_maxmarg",datavector)
 
     return self.compute_logp(datavector)

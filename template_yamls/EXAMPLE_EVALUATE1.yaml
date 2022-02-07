@@ -5,6 +5,11 @@ stop_at_error: True
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
+    create_baryon_pca: True
+    #baryon_pca_select_simulations: TNG100/HzAGN/mb2/illustris/eagle/owls_AGN_T80/owls_AGN_T85/owls_AGN_T87/BAHAMAS_T76/BAHAMAS_T78/BAHAMAS_T80
+    baryon_pca_select_simulations: TNG100/HzAGN/mb2/owls_AGN_T80/owls_AGN_T85/owls_AGN_T87/BAHAMAS_T76/BAHAMAS_T78/BAHAMAS_T80
+    filename_baryon_pca:"./project/kids/data/pca.txt"
+
 
 params:
   As_1e9:
@@ -13,7 +18,7 @@ params:
       max: 5
     ref:
       dist: norm
-      loc: 2.1
+      loc: 2.866
       scale: 0.65
     proposal: 0.4
     latex: 10^9 A_\mathrm{s})
@@ -28,7 +33,7 @@ params:
       max: 1.07
     ref:
       dist: norm
-      loc: 0.96605
+      loc: 0.928
       scale: 0.01
     proposal: 0.01
     latex: n_\mathrm{s}
@@ -38,7 +43,7 @@ params:
       max: 91
     ref:
       dist: norm
-      loc: 67.32
+      loc: 71.1
       scale: 5
     proposal: 3
     latex: H_0
@@ -48,7 +53,7 @@ params:
       max: 0.07
     ref:
       dist: norm
-      loc: 0.0495
+      loc: 0.0455
       scale: 0.004
     proposal: 0.004
     latex: \Omega_\mathrm{b}
@@ -59,7 +64,7 @@ params:
       max: 0.9
     ref:
       dist: norm
-      loc: 0.316
+      loc: 0.211
       scale: 0.02
     proposal: 0.02
     latex: \Omega_\mathrm{m}
@@ -79,7 +84,7 @@ params:
       max: 1
     ref:
       dist: norm
-      loc: -0.99
+      loc: -0.9
       scale: 0.05
     proposal: 0.05
     latex: w_{0,\mathrm{DE}}
@@ -160,11 +165,11 @@ sampler:
   evaluate:
     N: 1
     override:
-      As_1e9: 2.1
-      ns: 0.96605
-      H0: 67.32
-      omegab: 0.04
-      omegam: 0.3
+      As_1e9: 2.866
+      ns: 0.928
+      H0: 71.1
+      omegab: 0.0455
+      omegam: 0.211
       mnu: 0.06
       DZ_S1: 0.00
       DZ_S2: 0.002
@@ -176,8 +181,8 @@ sampler:
       M3: 0.0
       M4: 0.0
       M5: 0.0
-      A1_1: 0.606102
-      A1_2: -1.51541
+      A1_1: 0.370
+      A1_2: 0.0
       w: -0.9
       wa: 0.0
 
