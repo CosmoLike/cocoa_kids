@@ -6,7 +6,6 @@ likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
     use_baryon_pca: False
-    filename_baryon_pca: "./projects/kids/data/baryon_pca_cosmic_shear"
     print_datavector: True
     print_datavector_file: "./projects/kids/chains/kids_theory_maxmarg.modelvector"
 
@@ -86,7 +85,7 @@ params:
       loc: -0.99
       scale: 0.05
     proposal: 0.05
-    latex: \log(10^{10} A_\mathrm{s})
+    latex: w_{0,\mathrm{DE}}+w_{a,\mathrm{DE}}
     drop: true
   w:
     prior:
