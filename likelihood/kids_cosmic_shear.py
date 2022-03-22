@@ -42,6 +42,6 @@ class kids_cosmic_shear(_cosmolike_prototype_base):
       out[:,0] = np.arange(0, size)
       out[:,1] = datavector
       fmt = '%d', '%1.8e'
-      np.savetxt("./projects/kids/data/kids_theory_maxmarg", out, fmt = fmt)
+      np.savetxt(self.print_datavector_file, out, fmt = fmt)
 
     return self.compute_logp(datavector)
