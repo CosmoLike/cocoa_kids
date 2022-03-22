@@ -37,7 +37,11 @@ class kids_cosmic_shear(_cosmolike_prototype_base):
       datavector = self.add_baryon_pcs_to_datavector(datavector)
 
     if self.print_datavector:
-      print(datavector)
-      np.savetxt("./projects/kids/data/kids_theory_maxmarg", datavector)
+      size = len(datavector)
+      out = np.zeros(shape=(size, 2))
+      out[:,0] = np.arange(0, size)
+      out[:,1] = datavector
+      fmt = '%d', '%1.8e'
+      np.savetxt("./projects/kids/data/kids_theory_maxmarg", out, fmt = fmt)
 
     return self.compute_logp(datavector)

@@ -1,5 +1,5 @@
-data_file = kids_theory_maxmarg
-#data_file = kids_dr4_shear_comp_AZCL.txt
+#data_file = kids_theory_maxmarg
+data_file = kids_dr4_shear_comp_AZCL.txt
 cov_file = kids_shear_cov_AZCL.txt
 mask_file = kids_cosmic_shear.mask
 nz_source_file = KiDS_NofZ_2.txt
