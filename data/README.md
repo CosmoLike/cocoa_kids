@@ -5,7 +5,7 @@
 
 ## Datavectors <a name="theory_data_vector"></a>
 
-### Cosmology of the `kids_theory_LCDM.modelvector` data vector? <a name="theory_data_vector"></a>
+### Cosmology of the `kids_theory_LCDM.modelvector` data vector <a name="theory_data_vector"></a>
     As_1e9: 2.866
     ns: 0.928
     H0: 71.1
