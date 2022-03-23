@@ -181,12 +181,12 @@ sampler:
         ]
       - [6,
           [
-            DZ_S1, DZ_S2, DZ_S3, DZ_S4, DZ_S5, A1_1, A1_2,
+            KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5, KIDS_A1_1, KIDS_A1_2,
           ]
         ]
       - [25,
           [
-            M1, M2, M3, M4, M5,
+            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5,
           ]
         ]
 
