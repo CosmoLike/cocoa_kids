@@ -6,7 +6,7 @@ likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
     print_datavector: True
-    print_datavector_file: "./projects/kids/chains/kids_theory_maxmarg.modelvector"
+    print_datavector_file: "./projects/kids/chains/kids_theory_LCDM.modelvector"
 
 params:
   As_1e9:
@@ -182,7 +182,7 @@ sampler:
       KIDS_M5: 0.0
       KIDS_A1_1: 0.370
       KIDS_A1_2: 0.0
-      w: -0.9
-      w0pwa: -0.9
+      w: -1.0
+      w0pwa: -1.0
 
 output: ./projects/kids/chains/EXAMPLE_EVALUATE1
