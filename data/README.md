@@ -3,7 +3,7 @@
 2. [Mask](#masks)
 3. [Covariance](#covariance)
 
-## Data vector? <a name="theory_data_vector"></a>
+## Data vector <a name="theory_data_vector"></a>
 
 ### Cosmology of the `kids_theory_LCDM.modelvector` data vector? <a name="theory_data_vector"></a>
     As_1e9: 2.866
