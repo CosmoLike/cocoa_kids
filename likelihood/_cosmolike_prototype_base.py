@@ -314,7 +314,7 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
     ci.set_nuisance_shear_calib(
       M = [
         params_values.get(p, None) for p in [
-          "M"+str(i+1) for i in range(self.source_ntomo)
+          "KIDS_M"+str(i+1) for i in range(self.source_ntomo)
         ]
       ]
     )
@@ -322,7 +322,7 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
     ci.set_nuisance_shear_photoz(
       bias = [
         params_values.get(p, None) for p in [
-          "DZ_S"+str(i+1) for i in range(self.source_ntomo)
+          "KIDS_DZ_S"+str(i+1) for i in range(self.source_ntomo)
         ]
       ]
     )
@@ -330,17 +330,17 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
     ci.set_nuisance_ia(
       A1 = [
         params_values.get(p, None) for p in [
-          "A1_"+str(i+1) for i in range(self.source_ntomo)
+          "KIDS_A1_"+str(i+1) for i in range(self.source_ntomo)
         ]
       ],
       A2 = [
         params_values.get(p, None) for p in [
-          "A2_"+str(i+1) for i in range(self.source_ntomo)
+          "KIDS_A2_"+str(i+1) for i in range(self.source_ntomo)
         ]
       ],
       B_TA = [
         params_values.get(p, None) for p in [
-          "BTA_"+str(i+1) for i in range(self.source_ntomo)
+          "KIDS_BTA_"+str(i+1) for i in range(self.source_ntomo)
         ]
       ],
     )
@@ -353,31 +353,31 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
     ci.set_nuisance_bias(
       B1 = [
         params_values.get(p, None) for p in [
-          "B1_"+str(i+1) for i in range(self.lens_ntomo)
+          "KIDS_B1_"+str(i+1) for i in range(self.lens_ntomo)
         ]
       ],
       B2 = [
         params_values.get(p, None) for p in [
-          "B2_"+str(i+1) for i in range(self.lens_ntomo)
+          "KIDS_B2_"+str(i+1) for i in range(self.lens_ntomo)
         ]
       ],
       B_MAG = [
         params_values.get(p, None) for p in [
-          "BMAG_"+str(i+1) for i in range(self.lens_ntomo)
+          "KIDS_BMAG_"+str(i+1) for i in range(self.lens_ntomo)
         ]
       ]
     )
     ci.set_nuisance_clustering_photoz(
       bias = [
         params_values.get(p, None) for p in [
-          "DZ_L"+str(i+1) for i in range(self.lens_ntomo)
+          "KIDS_DZ_L"+str(i+1) for i in range(self.lens_ntomo)
         ]
       ]
     )
     ci.set_point_mass(
       PMV = [
         params_values.get(p, None) for p in [
-          "PM"+str(i+1) for i in range(self.lens_ntomo)
+          "KIDS_PM"+str(i+1) for i in range(self.lens_ntomo)
         ]
       ]
     )
@@ -387,10 +387,10 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
   # ------------------------------------------------------------------------
 
   def set_baryon_related(self, **params_values):
-    self.baryon_pcs_qs[0] = params_values.get("BARYON_Q1", None)
-    self.baryon_pcs_qs[1] = params_values.get("BARYON_Q2", None)
-    self.baryon_pcs_qs[2] = params_values.get("BARYON_Q3", None)
-    self.baryon_pcs_qs[3] = params_values.get("BARYON_Q4", None)
+    self.baryon_pcs_qs[0] = params_values.get("KIDS_BARYON_Q1", None)
+    self.baryon_pcs_qs[1] = params_values.get("KIDS_BARYON_Q2", None)
+    self.baryon_pcs_qs[2] = params_values.get("KIDS_BARYON_Q3", None)
+    self.baryon_pcs_qs[3] = params_values.get("KIDS_BARYON_Q4", None)
     
   def add_baryon_pcs_to_datavector(self, datavector):    
     return datavector[:] + self.baryon_pcs_qs[0]*self.baryon_pcs[:,0] \

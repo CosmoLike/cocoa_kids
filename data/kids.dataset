@@ -1,3 +1,4 @@
+# AZCL = Arizona Cosmo Lab
 data_file = ../chains/kids_theory_maxmarg.modelvector
 #data_file = kids_dr4_shear_comp_AZCL.txt
 cov_file = kids_shear_cov_AZCL.txt
