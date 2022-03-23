@@ -1,6 +1,5 @@
 # Table of contents
 1. [How to run the example plot script?](#overview)
-2. [How to modify the example plot script?](#modify)
 
 ## How to run the example plot script? <a name="overview"></a>
 
