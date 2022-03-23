@@ -1,7 +1,7 @@
 # Table of contents
-1. [Cosmology of the kids_theory_LCDM.modelvector](#theory_data_vector)
+1. [Cosmology of the kids_theory_LCDM.modelvector data vector](#theory_data_vector)
 
-## Cosmology of the kids_theory_LCDM.modelvector? <a name="theory_data_vector"></a>
+## Cosmology of the `kids_theory_LCDM.modelvector` data vector? <a name="theory_data_vector"></a>
 
     As_1e9: 2.866
     ns: 0.928
