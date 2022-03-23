@@ -7,9 +7,6 @@ import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
 
-#DELETE TMP FILES
-subprocess.Popen("rm .VM_P1_TMP[0-9].*", shell=True, cwd=".")
-
 # GENERAL PLOT OPTIONS
 matplotlib.rcParams['mathtext.fontset'] = 'stix'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
