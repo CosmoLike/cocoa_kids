@@ -1,5 +1,6 @@
 # Table of contents
 1. [Cosmology of the kids_theory_LCDM.modelvector data vector](#theory_data_vector)
+2. [Mask Explanation](#masks)
 
 ## Cosmology of the `kids_theory_LCDM.modelvector` data vector? <a name="theory_data_vector"></a>
 
@@ -23,3 +24,7 @@
     KIDS_A1_2: 0.0
     w: -1.0
     w0pwa: -1.0
+
+## Mask Explanation <a name="masks"></a>
+
+  The mask `kids_cosmic_shear.mask` correspond to the original KIDS scale cuts (PLEASE ADD THE SCALE CUTS BELOW AND THE LINK TO THE ORIGINAL FILE)
