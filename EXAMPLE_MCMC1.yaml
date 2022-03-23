@@ -186,9 +186,9 @@ sampler:
     # Exploiting speed hierarchy
     # ---------------------------------------------------------------------
     # ---------------------------------------------------------------------
-    measure_speeds: True
+    measure_speeds: False
     drag: False
-    oversample_power: 0
+    oversample_power: 0.4
     oversample_thin: True
     blocking:
       - [1,
@@ -196,7 +196,7 @@ sampler:
             As_1e9, ns, H0, omegab, omegam, mnu, w0pwa, w
           ]
         ]
-      - [4,
+      - [3,
           [
             DZ_S1, DZ_S2, DZ_S3, DZ_S4, DZ_S5, A1_1, A1_2,
           ]
