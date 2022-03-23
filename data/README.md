@@ -1,9 +1,9 @@
 # Table of contents
-1. [Data vector](#theory_data_vector)
-2. [Mask](#masks)
-3. [Covariance](#covariance)
+1. [Datavectors](#theory_data_vector)
+2. [Masks](#masks)
+3. [Covariances](#covariance)
 
-## Data vector <a name="theory_data_vector"></a>
+## Datavectors <a name="theory_data_vector"></a>
 
 ### Cosmology of the `kids_theory_LCDM.modelvector` data vector? <a name="theory_data_vector"></a>
     As_1e9: 2.866
@@ -27,10 +27,10 @@
     w: -1.0
     w0pwa: -1.0
 
-## Mask <a name="masks"></a>
+## Masks <a name="masks"></a>
 
   The mask `kids_cosmic_shear.mask` correspond to the original KIDS scale cuts (PLEASE ADD THE SCALE CUTS BELOW AND THE LINK TO THE ORIGINAL FILE)
 
-## Covariance <a name="covariance"></a>
+## Covariances <a name="covariance"></a>
 
   TEST TEST
