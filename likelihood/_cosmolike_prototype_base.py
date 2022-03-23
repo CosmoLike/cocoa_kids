@@ -127,7 +127,7 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
 
     ci.initial_setup()
     ci.init_accuracy_boost(self.accuracyboost, self.samplingboost, self.integration_accuracy)
-    
+
     ci.init_probes(possible_probes=self.probe)
 
     ci.init_binning(self.ntheta, self.theta_min_arcmin, self.theta_max_arcmin)
@@ -168,7 +168,7 @@ class _cosmolike_prototype_base(_DataSetLikelihood):
       ci.init_baryon_pca_scenarios(self.baryon_pca_select_simulations)
       self.use_baryon_pca = False
     else:
-      if ini.string('baryon_pca_file'):
+      if ini.string('baryon_pca_file', default=''):
         baryon_pca_file = ini.relativeFileName('baryon_pca_file')
         self.baryon_pcs = np.loadtxt(baryon_pca_file)
         self.use_baryon_pca = True
