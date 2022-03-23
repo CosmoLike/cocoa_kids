@@ -5,7 +5,6 @@ stop_at_error: True
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-    use_baryon_pca: False
     print_datavector: True
     print_datavector_file: "./projects/kids/chains/kids_theory_maxmarg.modelvector"
 
