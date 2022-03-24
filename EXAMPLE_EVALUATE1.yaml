@@ -138,16 +138,16 @@ params:
   omegan:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
-#  BARYON_Q1:
-#    prior:
-#      min: -3
-#      max: 9
-#    ref:
-#      dist: norm
-#      loc: 3
-#      scale: 5
-#    proposal: 1
-#    latex: BQ1_\mathrm{KiDS}^1
+  KIDS_BARYON_Q1:
+    prior:
+      min: -3
+      max: 9
+    ref:
+      dist: norm
+      loc: 3
+      scale: 5
+    proposal: 1
+    latex: BQ1_\mathrm{KiDS}^1
 
 theory:
   camb:
@@ -187,5 +187,6 @@ sampler:
       KIDS_A1_2: 0.0
       w: -1.0
       w0pwa: -1.0
+      KIDS_BARYON_Q1: 0.0
 
 output: ./projects/kids/chains/EXAMPLE_EVALUATE1

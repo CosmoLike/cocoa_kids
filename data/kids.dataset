@@ -1,12 +1,13 @@
 # AZCL = Arizona Cosmo Lab
-data_file = ../chains/kids_theory_maxmarg.modelvector
+data_file = kids_theory_LCDM.modelvector
 #data_file = kids_dr4_shear_comp_AZCL.txt
 cov_file = kids_shear_cov_AZCL.txt
-mask_file = kids_cosmic_shear.mask
+mask_file = kids_cosmic_shear_all.mask
+#mask_file = kids_cosmic_shear.mask
 nz_source_file = KiDS_NofZ_2.txt
 source_ntomo = 5
 n_theta = 9
 IA_model = 5
 theta_min_arcmin = 0.5
 theta_max_arcmin = 300.
-baryon_pca_file =
+baryon_pca_file = ../chains/pca_example_evaluate1.txt
