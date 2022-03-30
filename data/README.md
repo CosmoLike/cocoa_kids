@@ -42,10 +42,10 @@
   ACZL covariance was computed using the CosmoLike framework.
   `__` is the covariance from the KiDS team's 4th data release.
 
-##C(l)'s
+## C(l)'s
 
   Cl_footprint_KiDS_DR4 was calculated using an Nside = 4096 healpix map of the KiDS DR4 footprint, which was created at AZCL using the RAs, Declensions, and star-galaxy flags from the KiDS DR4 catalogue. 
 
-##n(z)'s
+## n(z)'s
 
   KIDS_NofZ.asc` and `KIDS_NofZ_2.txt` are identical copies except for the file format. The purpose of having a copy is for lens = source simulations where the code may require the lens and source n(z) files to be separate. These n(z) are from the KiDS catalogue: __source ref to go here__
