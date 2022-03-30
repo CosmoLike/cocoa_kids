@@ -29,9 +29,9 @@
 
 ### Data Vector Sources and Naming Conventions
    
-    All files ending with "AZCL" are computed by members of the Arizona Cosmology Lab, using the Cocoa framework for model vectors and likelihood analyses.
-    2PCFs from AZCL were computed using TreeCorr and the data from the KiDS DR4 catalogue.
-    The difference between kids_shear_data and kids_shear_data_full is that the "full" array includes the theta values of the bin centers (calculated using rnom convention in TreeCorr--which matches the theta values of the KiDS bins. Both vectors use the same ordering of bin combinations as the KiDS team, which is different from the default ordering of bin combinations by TreeCorr.
+  All files ending with "AZCL" are computed by members of the Arizona Cosmology Lab, using the Cocoa framework for model vectors and likelihood analyses.
+  2PCFs from AZCL were computed using TreeCorr and the data from the KiDS DR4 catalogue.
+  The difference between kids_shear_data and kids_shear_data_full is that the "full" array includes the theta values of the bin centers (calculated using rnom convention in TreeCorr--which matches the theta values of the KiDS bins. Both vectors use the same ordering of bin combinations as the KiDS team, which is different from the default ordering of bin combinations by TreeCorr.
     
 ## Masks <a name="masks"></a>
 
