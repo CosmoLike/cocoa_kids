@@ -1,7 +1,7 @@
 # AZCL = Arizona Cosmo Lab
 data_file = kids_theory_LCDM.modelvector
 #data_file = kids_dr4_shear_comp_AZCL.txt
-cov_file = kids_shear_cov_AZCL.txt
+cov_file = kids_shear_cov_analytic_AZCL.txt
 mask_file = kids_cosmic_shear_all.mask
 #mask_file = kids_cosmic_shear.mask
 nz_source_file = KiDS_NofZ_2.txt
