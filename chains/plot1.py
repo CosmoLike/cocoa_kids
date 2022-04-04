@@ -28,7 +28,7 @@ matplotlib.rcParams['savefig.bbox'] = 'tight'
 matplotlib.rcParams['savefig.format'] = 'pdf'
 
 # ADDING NEFF AS DERIVED PARAMETER
-parameter = [u'w',u'wa',u'H0',u's8omegamp5',u'omegam',u'omegab',u'mnu']
+parameter = [u'w',u'H0',u's8omegamp5',u'omegam',u'omegab']
 chaindir=r'.'
 
 analysissettings={'smooth_scale_1D':0.45,'smooth_scale_2D':0.45,'ignore_rows': u'0.3',
@@ -47,7 +47,7 @@ g.settings.lab_fontsize=15
 g.legend_labels=False
 
 param_3d = None
-g.triangle_plot(['EXAMPLE_MCMC1'],parameter,
+g.triangle_plot(['KIDS_baseline_MCMC'],parameter,
 plot_3d_with_param=param_3d,line_args=[
 {'lw': 1.0,'ls': 'solid', 'color':'royalblue'},
 {'lw': 1.6,'ls': 'solid', 'color':'firebrick'},
