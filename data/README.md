@@ -45,7 +45,7 @@
 
 ## C(l)'s
 
-  Cl_footprint_KiDS_DR4 was calculated using an Nside = 4096 healpix map of the KiDS DR4 footprint, which was created at AZCL using the RAs, Declensions, and star-galaxy flags from the KiDS DR4 catalogue. 
+  Cl_footprint_KiDS_DR4 was calculated using an `Nside = 4096 healpix map of the KiDS DR4 footprint, which was created at AZCL using the RAs, Declensions, and star-galaxy flags from the KiDS DR4 catalogue. 
 
 ## n(z)'s
 
