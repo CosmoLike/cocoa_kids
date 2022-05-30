@@ -16,44 +16,44 @@
   KIDS_DZ_S2:
     prior:
       dist: norm
-      loc: 0.00
+      loc: 0.002
       scale: 0.0113
     ref:
       dist: norm
-      loc: 0.00
+      loc: 0.002
       scale: 0.0113
     proposal: 0.0005
     latex: \Delta z_\mathrm{s}^2
   KIDS_DZ_S3:
     prior:
       dist: norm
-      loc: 0.00
+      loc: 0.013
       scale: 0.0118
     ref:
       dist: norm
-      loc: 0.00
+      loc: 0.013
       scale: 0.0118
     proposal: 0.0005
     latex: \Delta z_\mathrm{s}^3
   KIDS_DZ_S4:
     prior:
       dist: norm
-      loc: 0.00
+      loc: 0.011
       scale: 0.0087
     ref:
       dist: norm
-      loc: 0.000
+      loc: 0.011
       scale: 0.0087
     proposal: 0.0005
     latex: \Delta z_\mathrm{s}^4
   KIDS_DZ_S5:
     prior:
       dist: norm
-      loc: 0.00
+      loc: -0.006
       scale: 0.0097
     ref:
       dist: norm
-      loc: 0.00
+      loc: -0.006
       scale: 0.0097
     proposal: 0.0005
     latex: \Delta z_\mathrm{s}^5
@@ -195,3 +195,9 @@
   KIDS_BARYON_Q2:
     value: 0.0
     latex: BQ2_\mathrm{}^2
+  KIDS_BARYON_Q3:
+    value: 0.0
+    latex: BQ3_\mathrm{}^1
+  KIDS_BARYON_Q4:
+    value: 0.0
+    latex: BQ4_\mathrm{}^2
