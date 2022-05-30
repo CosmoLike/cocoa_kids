@@ -189,4 +189,4 @@ sampler:
     # ---------------------------------------------------------------------
     Rminus1_single_split: 4
 
-output: ./projects/kids/chains/KIDS_baseline_MCMC_test
+output: ./projects/kids/chains/KIDS_baseline_MCMC
