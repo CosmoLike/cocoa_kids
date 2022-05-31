@@ -5,7 +5,8 @@ stop_at_error: False
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-        
+    data_file: kids_baseline.dataset
+    
 params:
   As_1e9:
     prior:
@@ -68,14 +69,7 @@ params:
     value: 0.06
     latex: \m_\\nu
   w:
-    prior:
-      min: -3
-      max: -0.01
-    ref:
-      dist: norm
-      loc: -1.0
-      scale: 0.05
-    proposal: 0.05
+    value: -1.0
     latex: w_{0,\mathrm{DE}}
   omegabh2:
     value: 'lambda omegab, H0: omegab*(H0/100)**2'
@@ -168,7 +162,7 @@ sampler:
     blocking:
       - [1,
           [
-            As_1e9, ns, H0, omegab, omegam, w
+            As_1e9, ns, H0, omegab, omegam
           ]
         ]
       - [10,
