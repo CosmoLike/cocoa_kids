@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#SBATCH --job-name=DESY1_PL_MC1
-#SBATCH --output=DESY1_PL_MC1-%j.out
+#SBATCH --job-name=DESKIDS
+#SBATCH --output=DESKIDS-%j.out
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --ntasks-per-socket=2
-#SBATCH --cpus-per-task=11
+#SBATCH --cpus-per-task=10
 #SBATCH --partition=high_priority
 #SBATCH --qos=user_qos_timeifler
 #SBATCH --account=timeifler
-#SBATCH --time=100:00:00
+#SBATCH --time=80:00:00
 
 # Clear the environment from any previously loaded modules
 module purge > /dev/null 2>&1
