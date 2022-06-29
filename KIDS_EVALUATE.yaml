@@ -189,5 +189,6 @@ sampler:
       w: -1.0
       w0pwa: -1.0
       KIDS_BARYON_Q1: 0.0
+      KIDS_BARYON_Q2: 0.0
 
 output: ./projects/kids/chains/KIDS_extra

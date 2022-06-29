@@ -1,6 +1,6 @@
 timing: True
-debug: True
-stop_at_error: True
+debug: False
+stop_at_error: False
 
 likelihood:
   kids.kids_cosmic_shear:
@@ -102,7 +102,7 @@ params:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
   KIDS_BARYON_Q1:
-     prior:
+    prior:
       min: -5.0
       max: 10.0
     ref:
@@ -112,7 +112,7 @@ params:
     proposal: 0.5
     latex: KIDS_BQ1_\mathrm{KiDS}^1
   KIDS_BARYON_Q2:
-     prior:
+    prior:
       min: -2.5
       max: 2.5
     ref:
@@ -120,7 +120,7 @@ params:
       loc: 0
       scale: 0.5 
     proposal: 0.5
-    latex: KIDS_BQ1_\mathrm{KiDS}^1
+    latex: KIDS_BQ2_\mathrm{KiDS}^1
 
 theory:
   camb:
@@ -142,7 +142,7 @@ sampler:
     # File (w/ path) or matrix defining a covariance matrix for the proposal:
     # - null (default): will be generated from params info (prior and proposal)
     # - matrix: remember to set `covmat_params` to the parameters in the matrix
-    covmat:
+    covmat: ./projects/kids/chains/KIDS_MCMC_WCDM_WOB_OO.covmat
     covmat_params:
     # ---------------------------------------------------------------------
     # ---------------------------------------------------------------------
