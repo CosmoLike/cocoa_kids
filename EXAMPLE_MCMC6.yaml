@@ -1,4 +1,4 @@
-timing: True
+timing: False
 debug: False
 stop_at_error: False
 
@@ -70,6 +70,18 @@ params:
   mnu:
     value: 0.06
     latex: \m_\\nu
+  w:
+    value: -1
+    latex: w_{0,\mathrm{DE}}
+  tau:
+    value: 0.0697186
+    latex: \tau_\mathrm{reio}
+  KIDS_BARYON_Q1:
+    pvalue: 0.0
+    latex: Q1_\mathrm{KiDS}^1
+  KIDS_BARYON_Q2:
+    value: 0.0
+    latex: Q2_\mathrm{KiDS}^1
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -79,9 +91,6 @@ params:
   omegach2:
     value: 'lambda omegam, omegab, mnu, H0: (omegam-omegab)*(H0/100)**2-(mnu*(3.046/3)**0.75)/94.0708'
     latex: \Omega_\mathrm{c} h^2
-  tau:
-    value: 0.0697186
-    latex: \tau_\mathrm{reio}
   omegal:
     latex: \Omega_\Lambda
   omegamh2:
@@ -103,15 +112,6 @@ params:
   omegan:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  KIDS_BARYON_Q1:
-    pvalue: 0.0
-    latex: BQ1_\mathrm{KiDS}^1
-  KIDS_BARYON_Q2:
-    value: 0.0
-    latex: BQ2_\mathrm{KiDS}^1
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -230,7 +230,10 @@ params:
       scale: 0.0097
     proposal: 0.0005
     latex: \Delta z_\mathrm{s}^5
-
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  
 theory:
   camb:
     path: ./external_modules/code/CAMB
@@ -294,8 +297,7 @@ sampler:
         ]
       - [5,
           [
-            KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5, 
-            KIDS_A1_1, KIDS_A1_2
+            KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5, KIDS_A1_1, KIDS_A1_2
           ]
         ]
       - [25,

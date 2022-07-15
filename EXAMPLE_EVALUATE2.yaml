@@ -69,26 +69,23 @@ params:
     latex: \Omega_\mathrm{m}
     drop: true
   mnu:
-    prior:
-      min: 0.06
-      max: 0.6
-    ref:
-      dist: norm
-      loc: 0.25
-      scale: 0.1
-    proposal: 0.05
+    value: 0.06
+    latex: \m_\\nu
   w:
     value: -1.0
     latex: w_{0,\mathrm{DE}}
+  tau:
+    value: 0.0697186
+    latex: \tau_\mathrm{reio}
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
   omegabh2:
     value: 'lambda omegab, H0: omegab*(H0/100)**2'
     latex: \Omega_\mathrm{b} h^2
   omegach2:
     value: 'lambda omegam, omegab, mnu, H0: (omegam-omegab)*(H0/100)**2-(mnu*(3.046/3)**0.75)/94.0708'
     latex: \Omega_\mathrm{c} h^2
-  tau:
-    value: 0.0697186
-    latex: \tau_\mathrm{reio}
   omegal:
     latex: \Omega_\Lambda
   omegamh2:
@@ -248,7 +245,7 @@ theory:
     extra_args:
       halofit_version: takahashi
       AccuracyBoost: 1.1
-      lens_potential_accuracy: 1.0
+      lens_potential_accuracy: 1.05
       num_massive_neutrinos: 1
       nnu: 3.046
       dark_energy_model: ppf
@@ -264,7 +261,6 @@ sampler:
       H0: 67.32
       omegab: 0.04
       omegam: 0.3
-      mnu: 0.06
       KIDS_DZ_S1: 0.00
       KIDS_DZ_S2: 0.002
       KIDS_DZ_S3: 0.013
