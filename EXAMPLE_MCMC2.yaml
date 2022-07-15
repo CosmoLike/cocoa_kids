@@ -67,6 +67,16 @@ params:
   mnu:
     value: 0.06
     latex: \m_\\nu
+  w:
+    prior:
+      min: -3
+      max: -0.01
+    ref:
+      dist: norm
+      loc: -0.99
+      scale: 0.05
+    proposal: 0.05
+    latex: w_{0,\mathrm{DE}}
   omegabh2:
     value: 'lambda omegab, H0: omegab*(H0/100)**2'
     latex: \Omega_\mathrm{b} h^2
@@ -98,14 +108,7 @@ params:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
   KIDS_BARYON_Q1:
-    prior:
-      min: -3
-      max: 9
-    ref:
-      dist: norm
-      loc: 3
-      scale: 5
-    proposal: 1
+    value: 0.0
     latex: KIDS_BQ1_\mathrm{KiDS}^1
   KIDS_BARYON_Q2:
     value: 0.0
@@ -165,7 +168,7 @@ sampler:
     blocking:
       - [1,
           [
-            As_1e9, ns, H0, omegab, omegam
+            As_1e9, ns, H0, omegab, omegam, w
           ]
         ]
       - [10,
@@ -175,7 +178,7 @@ sampler:
         ]
       - [25,
           [
-            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5, KIDS_BARYON_Q1
+            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5
           ]
         ]
     # ---------------------------------------------------------------------
