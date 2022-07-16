@@ -2,60 +2,64 @@
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # WL photo-z errors
+prior:
+  DZ: "lambda KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5: stats.multivariate_normal.logpdf(
+        [KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5], 
+        mean = [-0.001, 0.004, 0.011, -0.008, 0.003], 
+        cov = [[0.000144, 0.00004992, -0.0000408, 0.0, 0.00000624], 
+               [0.00004992, 0.000169, 0.0000156, -0.00001859, -0.00000169], 
+               [-0.0000408, 0.0000156, 0.0004, -0.0000104, 0.0000052], 
+               [0.0, -0.00001859, -0.0000104, 0.000169, 0.00001859], 
+               [0.00000624, -0.00000169, 0.0000052, 0.00001859, 0.000169]])"
   KIDS_DZ_S1:
     prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.0106
+      min: -0.25
+      max: 0.25
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.0106
-    proposal: 0.0005
+      scale: 0.02
+    proposal: 0.02
     latex: \Delta z_\mathrm{s}^1
   KIDS_DZ_S2:
     prior:
-      dist: norm
-      loc: 0.002
-      scale: 0.0113
+      min: -0.25
+      max: 0.25
     ref:
       dist: norm
-      loc: 0.002
-      scale: 0.0113
-    proposal: 0.0005
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
     latex: \Delta z_\mathrm{s}^2
   KIDS_DZ_S3:
     prior:
-      dist: norm
-      loc: 0.013
-      scale: 0.0118
+      min: -0.25
+      max: 0.25
     ref:
       dist: norm
-      loc: 0.013
-      scale: 0.0118
-    proposal: 0.0005
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
     latex: \Delta z_\mathrm{s}^3
   KIDS_DZ_S4:
     prior:
-      dist: norm
-      loc: 0.011
-      scale: 0.0087
+      min: -0.25
+      max: 0.25
     ref:
       dist: norm
-      loc: 0.011
-      scale: 0.0087
-    proposal: 0.0005
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
     latex: \Delta z_\mathrm{s}^4
   KIDS_DZ_S5:
     prior:
-      dist: norm
-      loc: -0.006
-      scale: 0.0097
+      min: -0.25
+      max: 0.25
     ref:
       dist: norm
-      loc: -0.006
-      scale: 0.0097
-    proposal: 0.0005
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
     latex: \Delta z_\mathrm{s}^5
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
