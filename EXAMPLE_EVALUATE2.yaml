@@ -113,12 +113,6 @@ params:
   omegan:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
-  KIDS_BARYON_Q1:
-    value: 0.0
-    latex: Q_1
-  KIDS_BARYON_Q2:
-    value: 0.0
-    latex: Q_2
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -178,65 +172,6 @@ params:
       scale: 0.005
     proposal: 0.005
     latex: m_\mathrm{}^5
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # WL photo-z errors
-  KIDS_DZ_S1:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.0106
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.0106
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^1
-  KIDS_DZ_S2:
-    prior:
-      dist: norm
-      loc: 0.002
-      scale: 0.0113
-    ref:
-      dist: norm
-      loc: 0.002
-      scale: 0.0113
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^2
-  KIDS_DZ_S3:
-    prior:
-      dist: norm
-      loc: 0.013
-      scale: 0.0118
-    ref:
-      dist: norm
-      loc: 0.013
-      scale: 0.0118
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^3
-  KIDS_DZ_S4:
-    prior:
-      dist: norm
-      loc: 0.011
-      scale: 0.0087
-    ref:
-      dist: norm
-      loc: 0.011
-      scale: 0.0087
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^4
-  KIDS_DZ_S5:
-    prior:
-      dist: norm
-      loc: -0.006
-      scale: 0.0097
-    ref:
-      dist: norm
-      loc: -0.006
-      scale: 0.0097
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^5
 
 theory:
   camb:
@@ -272,6 +207,5 @@ sampler:
       KIDS_M4: 0.0
       KIDS_M5: 0.0
       KIDS_A1_1: 0.606102
-      KIDS_A1_2: -1.51541
 
 output: ./projects/kids/chains/EXAMPLE_EVALUATE2

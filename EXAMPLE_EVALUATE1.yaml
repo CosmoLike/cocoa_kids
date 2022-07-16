@@ -8,7 +8,7 @@ likelihood:
     data_file: kids_baseline.dataset
     integration_accuracy: 0
     print_datavector: True
-    print_datavector_file: "./projects/kids/chains/kids_theory_des_kids.modelvector"
+    print_datavector_file: "./projects/kids/chains/kids_theory_LCDM.modelvector"
 
 params:
   As_1e9:
@@ -69,26 +69,23 @@ params:
     latex: \Omega_\mathrm{m}
     drop: true
   mnu:
-    prior:
-      min: 0.06
-      max: 0.6
-    ref:
-      dist: norm
-      loc: 0.25
-      scale: 0.1
-    proposal: 0.05
+    value: 0.06
+    latex: \m_\\nu
   w:
     value: -1.0
     latex: w_{0,\mathrm{DE}}
+  tau:
+    value: 0.0697186
+    latex: \tau_\mathrm{reio}
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
   omegabh2:
     value: 'lambda omegab, H0: omegab*(H0/100)**2'
     latex: \Omega_\mathrm{b} h^2
   omegach2:
     value: 'lambda omegam, omegab, mnu, H0: (omegam-omegab)*(H0/100)**2-(mnu*(3.046/3)**0.75)/94.0708'
     latex: \Omega_\mathrm{c} h^2
-  tau:
-    value: 0.0697186
-    latex: \tau_\mathrm{reio}
   omegal:
     latex: \Omega_\Lambda
   omegamh2:
@@ -116,12 +113,6 @@ params:
   omegan:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
-  KIDS_BARYON_Q1:
-    value: 0.0
-    latex: BQ1_\mathrm{KiDS}^1
-  KIDS_BARYON_Q2:
-    value: 0.0
-    latex: BQ2_\mathrm{KiDS}^1
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -181,65 +172,6 @@ params:
       scale: 0.005
     proposal: 0.005
     latex: m_\mathrm{}^5
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # WL photo-z errors
-  KIDS_DZ_S1:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.0106
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.0106
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^1
-  KIDS_DZ_S2:
-    prior:
-      dist: norm
-      loc: 0.002
-      scale: 0.0113
-    ref:
-      dist: norm
-      loc: 0.002
-      scale: 0.0113
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^2
-  KIDS_DZ_S3:
-    prior:
-      dist: norm
-      loc: 0.013
-      scale: 0.0118
-    ref:
-      dist: norm
-      loc: 0.013
-      scale: 0.0118
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^3
-  KIDS_DZ_S4:
-    prior:
-      dist: norm
-      loc: 0.011
-      scale: 0.0087
-    ref:
-      dist: norm
-      loc: 0.011
-      scale: 0.0087
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^4
-  KIDS_DZ_S5:
-    prior:
-      dist: norm
-      loc: -0.006
-      scale: 0.0097
-    ref:
-      dist: norm
-      loc: -0.006
-      scale: 0.0097
-    proposal: 0.0005
-    latex: \Delta z_\mathrm{s}^5
 
 theory:
   camb:
@@ -248,7 +180,7 @@ theory:
     extra_args:
       halofit_version: takahashi
       AccuracyBoost: 1.1
-      lens_potential_accuracy: 1.0
+      lens_potential_accuracy: 1.05
       num_massive_neutrinos: 1
       nnu: 3.046
       dark_energy_model: ppf
@@ -264,7 +196,6 @@ sampler:
       H0: 67.32
       omegab: 0.04
       omegam: 0.3
-      mnu: 0.06
       KIDS_DZ_S1: 0.00
       KIDS_DZ_S2: 0.002
       KIDS_DZ_S3: 0.013
@@ -276,6 +207,5 @@ sampler:
       KIDS_M4: 0.0
       KIDS_M5: 0.0
       KIDS_A1_1: 0.606102
-      KIDS_A1_2: -1.51541
 
 output: ./projects/kids/chains/EXAMPLE_EVALUATE1
