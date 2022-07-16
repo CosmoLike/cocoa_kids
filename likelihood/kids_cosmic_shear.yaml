@@ -18,4 +18,16 @@ filename_baryon_pca: "./projects/kids/data/pca_kids.txt"
 print_datavector: False
 print_datavector_file: "./projects/kids/chains/kids_theory_maxmarg.modelvector"
 
+prior:
+  DZ: "lambda KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5: stats.multivariate_normal.logpdf(
+        [KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5], 
+        mean = [-0.001, 0.004, 0.011, -0.008, 0.003], 
+        cov = [[0.000144, 0.00004992, -0.0000408, 0.0, 0.00000624], 
+               [0.00004992, 0.000169, 0.0000156, -0.00001859, -0.00000169], 
+               [-0.0000408, 0.0000156, 0.0004, -0.0000104, 0.0000052], 
+               [0.0, -0.00001859, -0.0000104, 0.000169, 0.00001859], 
+               [0.00000624, -0.00000169, 0.0000052, 0.00001859, 0.000169]])"
+
 params: !defaults [params_kids_cosmic_shear]
+
+

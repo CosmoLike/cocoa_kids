@@ -180,7 +180,7 @@ theory:
     extra_args:
       halofit_version: takahashi
       AccuracyBoost: 1.1
-      lens_potential_accuracy: 1.05
+      lens_potential_accuracy: 1.00
       num_massive_neutrinos: 1
       nnu: 3.046
       dark_energy_model: ppf

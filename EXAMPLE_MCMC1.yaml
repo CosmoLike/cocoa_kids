@@ -102,22 +102,32 @@ params:
   omegan:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  KIDS_BARYON_Q1:
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# Intrinsic alignment
+  KIDS_A1_1:
     prior:
-      min: -3
-      max: 9
+      min: -5
+      max:  5
     ref:
       dist: norm
-      loc: 3
-      scale: 5
-    proposal: 1
-    latex: KIDS_BQ1_\mathrm{KiDS}^1
-  KIDS_BARYON_Q2:
+      loc: 0.8
+      scale: 0.2
+    proposal: 0.2
+    latex: A_\mathrm{1-IA}^1
+  KIDS_A1_2:
     value: 0.0
-    latex: KIDS_BQ1_\mathrm{KiDS}^1
+    latex: A_\mathrm{1-IA}^2
+  KIDS_A1_3:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^3
+  KIDS_A1_4:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^4
+  KIDS_A1_5:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^5
 
 theory:
   camb:
@@ -125,8 +135,8 @@ theory:
     use_renames: True
     extra_args:
       halofit_version: takahashi
-      AccuracyBoost: 1.0
-      lens_potential_accuracy: 1.0
+      AccuracyBoost: 1.1
+      lens_potential_accuracy: 1.00
       num_massive_neutrinos: 1
       nnu: 3.046
       dark_energy_model: ppf
