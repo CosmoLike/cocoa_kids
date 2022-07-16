@@ -1,11 +1,13 @@
-timing: True
+timing: False
 debug: False
 stop_at_error: False
 
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-        
+    data_file: kids_baseline.dataset
+    integration_accuracy: 0 
+
 params:
   As_1e9:
     prior:
@@ -67,6 +69,9 @@ params:
   mnu:
     value: 0.06
     latex: \m_\\nu
+  tau:
+    value: 0.0697186
+    latex: \tau_\mathrm{reio}
   w:
     prior:
       min: -3
@@ -77,15 +82,15 @@ params:
       scale: 0.05
     proposal: 0.05
     latex: w_{0,\mathrm{DE}}
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
   omegabh2:
     value: 'lambda omegab, H0: omegab*(H0/100)**2'
     latex: \Omega_\mathrm{b} h^2
   omegach2:
     value: 'lambda omegam, omegab, mnu, H0: (omegam-omegab)*(H0/100)**2-(mnu*(3.046/3)**0.75)/94.0708'
     latex: \Omega_\mathrm{c} h^2
-  tau:
-    value: 0.0697186
-    latex: \tau_\mathrm{reio}
   omegal:
     latex: \Omega_\Lambda
   omegamh2:
@@ -107,8 +112,18 @@ params:
   omegan:
     derived: 'lambda omegan2, H0: omegan2/((H0/100)**2)'
     latex: \Omega_\mathrm{\\nu}
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
   KIDS_BARYON_Q1:
-    value: 0.0
+    prior:
+      min: -3
+      max: 9
+    ref:
+      dist: norm
+      loc: 3
+      scale: 5
+    proposal: 1
     latex: KIDS_BQ1_\mathrm{KiDS}^1
   KIDS_BARYON_Q2:
     value: 0.0
@@ -144,6 +159,10 @@ sampler:
     learn_proposal: True
     # Don't learn if convergence better than...
     learn_proposal_Rminus1_min: 0.03
+    # Don't learn if convergence is worse than...
+    learn_proposal_Rminus1_max: 200.
+    # (even earlier if a param is not in the given covariance matrix)
+    learn_proposal_Rminus1_max_early: 2000.
     # ---------------------------------------------------------------------
     # ---------------------------------------------------------------------
     # Convergence and stopping
@@ -163,7 +182,7 @@ sampler:
     # ---------------------------------------------------------------------
     measure_speeds: False
     drag: False
-    oversample_power: 1.0
+    oversample_power: 0.25
     oversample_thin: True
     blocking:
       - [1,
@@ -173,12 +192,12 @@ sampler:
         ]
       - [10,
           [
-            KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5, KIDS_A1_1, KIDS_A1_2
+            KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5, KIDS_A1_1
           ]
         ]
       - [25,
           [
-            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5
+            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5, KIDS_BARYON_Q1
           ]
         ]
     # ---------------------------------------------------------------------

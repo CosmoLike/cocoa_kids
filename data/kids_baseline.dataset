@@ -1,4 +1,3 @@
-# AZCL = Arizona Cosmo Lab
 data_file = kids_theory_LCDM.modelvector
 cov_file = kids_shear_cov_analytic_AZCL.txt
 mask_file = kids_cosmic_shear_all.mask
@@ -8,5 +7,4 @@ n_theta = 9
 IA_model = 4
 theta_min_arcmin = 0.5
 theta_max_arcmin = 300.
-baryon_pca_file =
-# ../chains/pca_kids.txt
+baryon_pca_file = pca_kids.txt
