@@ -196,11 +196,11 @@ sampler:
       H0: 67.32
       omegab: 0.04
       omegam: 0.3
-      KIDS_DZ_S1: 0.00
-      KIDS_DZ_S2: 0.002
-      KIDS_DZ_S3: 0.013
-      KIDS_DZ_S4: 0.011
-      KIDS_DZ_S5: -0.006
+      KIDS_DZ_S1: -0.001 
+      KIDS_DZ_S2: 0.004
+      KIDS_DZ_S3: 0.011 
+      KIDS_DZ_S4: -0.008 
+      KIDS_DZ_S5: 0.003
       KIDS_M1: 0.0
       KIDS_M2: 0.0
       KIDS_M3: 0.0
