@@ -5,7 +5,7 @@ stop_at_error: True
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-    data_file: kids_baseline.dataset
+    data_file: kids_des.dataset
     integration_accuracy: 0
     print_datavector: True
     print_datavector_file: "./projects/kids/chains/kids_theory_des_kids.modelvector"
