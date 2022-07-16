@@ -5,10 +5,10 @@ stop_at_error: True
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-    data_file: kids_baseline_all.dataset
+    data_file: kids_des.dataset
     integration_accuracy: 0
     print_datavector: True
-    print_datavector_file: "./projects/kids/chains/kids_theory_LCDM_all.modelvector"
+    print_datavector_file: "./projects/kids/chains/kids_theory_des_kids.modelvector"
 
 params:
   As_1e9:
@@ -208,4 +208,4 @@ sampler:
       KIDS_M5: 0.0
       KIDS_A1_1: 0.606102
 
-output: ./projects/kids/chains/EXAMPLE_EVALUATE2
+output: ./projects/kids/chains/EXAMPLE_EVALUATE3

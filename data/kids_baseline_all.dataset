@@ -1,6 +1,6 @@
-data_file = kids_theory_LCDM.modelvector
+data_file = kids_theory_LCDM_all.modelvector
 cov_file = kids_shear_cov_analytic_AZCL.txt
-mask_file = kids_cosmic_shear.mask
+mask_file = kids_cosmic_shear_all.mask
 nz_source_file = KiDS_NofZ_2.txt
 source_ntomo = 5
 n_theta = 9
