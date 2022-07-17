@@ -5,7 +5,7 @@ stop_at_error: True
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-    data_file: kids_des.dataset
+    data_file: kids_baseline_des.dataset
     integration_accuracy: 0
     print_datavector: True
     print_datavector_file: "./projects/kids/chains/kids_theory_des_kids.modelvector"
@@ -172,7 +172,34 @@ params:
       scale: 0.005
     proposal: 0.005
     latex: m_\mathrm{}^5
-
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # Intrinsic alignment
+  KIDS_A1_1:
+    prior:
+      min: -5
+      max:  5
+    ref:
+      dist: norm
+      loc: 0.8
+      scale: 0.2
+    proposal: 0.2
+    latex: A_\mathrm{1-IA}^1
+  KIDS_A1_2:
+    prior:
+      min: -5
+      max:  5
+    ref:
+      dist: norm
+      loc: 0.8
+      scale: 0.2
+    proposal: 0.2
+    latex: A_\mathrm{1-IA}^2
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  
 theory:
   camb:
     path: ./external_modules/code/CAMB
@@ -207,5 +234,6 @@ sampler:
       KIDS_M4: 0.0
       KIDS_M5: 0.0
       KIDS_A1_1: 0.606102
+      KIDS_A1_2: -1.51541
 
 output: ./projects/kids/chains/EXAMPLE_EVALUATE3

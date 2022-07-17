@@ -18,6 +18,198 @@ filename_baryon_pca: "./projects/kids/data/pca_kids.txt"
 print_datavector: False
 print_datavector_file: "./projects/kids/chains/kids_theory_maxmarg.modelvector"
 
+params:
+  KIDS_DZ_S1:
+    prior:
+      min: -0.25
+      max: 0.25
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
+    latex: \Delta z_\mathrm{s}^1
+  KIDS_DZ_S2:
+    prior:
+      min: -0.25
+      max: 0.25
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
+    latex: \Delta z_\mathrm{s}^2
+  KIDS_DZ_S3:
+    prior:
+      min: -0.25
+      max: 0.25
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
+    latex: \Delta z_\mathrm{s}^3
+  KIDS_DZ_S4:
+    prior:
+      min: -0.25
+      max: 0.25
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
+    latex: \Delta z_\mathrm{s}^4
+  KIDS_DZ_S5:
+    prior:
+      min: -0.25
+      max: 0.25
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.02
+    proposal: 0.02
+    latex: \Delta z_\mathrm{s}^5
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# Intrinsic alignment
+  KIDS_A1_1:
+    prior:
+      min: -5
+      max:  5
+    ref:
+      dist: norm
+      loc: 0.8
+      scale: 0.2
+    proposal: 0.2
+    latex: A_\mathrm{1-IA}^1
+  KIDS_A1_2:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^2
+  KIDS_A1_3:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^3
+  KIDS_A1_4:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^4
+  KIDS_A1_5:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^5
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+  KIDS_A2_1:
+    value: 0.0
+    latex: A_\mathrm{2-IA}^1
+  KIDS_A2_2:
+    value: 0.0
+    latex: A_\mathrm{2-IA}^2
+  KIDS_A2_3:
+    value: 0.0
+    latex: A_\mathrm{2-IA}^3
+  KIDS_A2_4:
+    value: 0.0
+    latex: A_\mathrm{2-IA}^4
+  KIDS_A2_5:
+    value: 0.0
+    latex: A_\mathrm{2-IA}^5
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+  KIDS_BTA_1:
+    value: 0.0
+    latex: A_\mathrm{BTA-IA}^1
+  KIDS_BTA_2:
+    value: 0.0
+    latex: A_\mathrm{BTA-IA}^2
+  KIDS_BTA_3:
+    value: 0.0
+    latex: A_\mathrm{BTA-IA}^3
+  KIDS_BTA_4:
+    value: 0.0
+    latex: A_\mathrm{BTA-IA}^4
+  KIDS_BTA_5:
+    value: 0.0
+    latex: A_\mathrm{BTA-IA}^5
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # Shear calibration parameters
+  KIDS_M1:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^1
+  KIDS_M2:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^2
+  KIDS_M3:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^3
+  KIDS_M4:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^4
+  KIDS_M5:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^5
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+  KIDS_BARYON_Q1:
+    value: 0.0
+    latex: BQ1_\mathrm{}^1
+  KIDS_BARYON_Q2:
+    value: 0.0
+    latex: BQ2_\mathrm{}^2
+  KIDS_BARYON_Q3:
+    value: 0.0
+    latex: BQ3_\mathrm{}^1
+  KIDS_BARYON_Q4:
+    value: 0.0
+    latex: BQ4_\mathrm{}^2
+
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+
 prior:
   DZ: "lambda KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5: stats.multivariate_normal.logpdf(
         [KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5], 
@@ -27,7 +219,3 @@ prior:
                [-0.0000408, 0.0000156, 0.0004, -0.0000104, 0.0000052], 
                [0.0, -0.00001859, -0.0000104, 0.000169, 0.00001859], 
                [0.00000624, -0.00000169, 0.0000052, 0.00001859, 0.000169]])"
-
-params: !defaults [params_kids_cosmic_shear]
-
-

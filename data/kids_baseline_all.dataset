@@ -8,5 +8,3 @@ IA_model = 4
 theta_min_arcmin = 0.5
 theta_max_arcmin = 300.
 baryon_pca_file = pca_kids.txt
-
-#Got parameters {'KIDS_M1': 0.0, 'KIDS_M2': 0.0, 'KIDS_M3': 0.0, 'KIDS_M4': 0.0, 'KIDS_M5': 0.0, 'KIDS_DZ_S1': -0.001, 'KIDS_DZ_S2': 0.004, 'KIDS_DZ_S3': 0.011, 'KIDS_DZ_S4': -0.008, 'KIDS_DZ_S5': 0.003, 'KIDS_A1_1': 0.606102, 'KIDS_A1_2': -0.36263438106336743, 'KIDS_A1_3': 0, 'KIDS_A1_4': 0, 'KIDS_A1_5': 0, 'KIDS_A2_1': 0, 'KIDS_A2_2': 0, 'KIDS_A2_3': 0, 'KIDS_A2_4': 0, 'KIDS_A2_5': 0, 'KIDS_BTA_1': 0, 'KIDS_BTA_2': 0, 'KIDS_BTA_3': 0, 'KIDS_BTA_4': 0, 'KIDS_BTA_5': 0, 'KIDS_BARYON_Q1': 0.0, 'KIDS_BARYON_Q2': 0.0, 'KIDS_BARYON_Q3': 0.0, 'KIDS_BARYON_Q4': 0.0}
