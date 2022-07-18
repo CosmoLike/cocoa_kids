@@ -69,19 +69,12 @@ params:
   mnu:
     value: 0.06
     latex: \m_\\nu
+  w:
+    value: -1
+    latex: w_{0,\mathrm{DE}}
   tau:
     value: 0.0697186
     latex: \tau_\mathrm{reio}
-  w:
-    prior:
-      min: -3
-      max: -0.01
-    ref:
-      dist: norm
-      loc: -0.99
-      scale: 0.05
-    proposal: 0.05
-    latex: w_{0,\mathrm{DE}}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -115,6 +108,91 @@ params:
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
+  # Shear calibration parameters
+  KIDS_M1:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^1
+  KIDS_M2:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^2
+  KIDS_M3:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^3
+  KIDS_M4:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^4
+  KIDS_M5:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: m_\mathrm{}^5
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # Intrinsic alignment
+  KIDS_A1_1:
+    prior:
+      min: -5
+      max:  5
+    ref:
+      dist: norm
+      loc: 0.8
+      scale: 0.2
+    proposal: 0.2
+    latex: A_\mathrm{1-IA}^1
+  KIDS_A1_2:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^2
+  KIDS_A1_3:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^3
+  KIDS_A1_4:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^4
+  KIDS_A1_5:
+    value: 0.0
+    latex: A_\mathrm{1-IA}^5  
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
   KIDS_BARYON_Q1:
     prior:
       min: -3
@@ -125,6 +203,15 @@ params:
       scale: 5
     proposal: 1
     latex: KIDS_BQ1_\mathrm{KiDS}^1
+  KIDS_BARYON_Q2:
+    value: 0.0
+    latex: BQ2_\mathrm{}^2
+  KIDS_BARYON_Q3:
+    value: 0.0
+    latex: BQ3_\mathrm{}^1
+  KIDS_BARYON_Q4:
+    value: 0.0
+    latex: BQ4_\mathrm{}^2
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
