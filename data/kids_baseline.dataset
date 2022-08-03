@@ -8,4 +8,3 @@ IA_model = 4
 theta_min_arcmin = 0.5
 theta_max_arcmin = 300.
 baryon_pca_file = pca_kids.txt
-

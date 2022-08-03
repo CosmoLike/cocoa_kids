@@ -7,7 +7,7 @@ likelihood:
     path: ./external_modules/data/kids
     data_file: kids_baseline.dataset
     integration_accuracy: 0 
-
+       
 params:
   As_1e9:
     prior:
@@ -69,9 +69,30 @@ params:
   mnu:
     value: 0.06
     latex: \m_\\nu
+  w0pwa:
+    prior:
+      min: -5 
+      max: -0.01
+    ref:
+      dist: norm
+      loc: -0.99
+      scale: 0.05
+    proposal: 0.05
+    latex: w_{0,\mathrm{DE}}+w_{a,\mathrm{DE}}
+    drop: true
   w:
-    value: -1
+    prior:
+      min: -3
+      max: -0.01
+    ref:
+      dist: norm
+      loc: -0.99
+      scale: 0.05
+    proposal: 0.05
     latex: w_{0,\mathrm{DE}}
+  wa:
+    value: 'lambda w0pwa, w: w0pwa - w'
+    latex: w_{a,\mathrm{DE}}
   tau:
     value: 0.0697186
     latex: \tau_\mathrm{reio}
@@ -189,20 +210,13 @@ params:
     latex: A_\mathrm{1-IA}^4
   KIDS_A1_5:
     value: 0.0
-    latex: A_\mathrm{1-IA}^5  
+    latex: A_\mathrm{1-IA}^5
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   KIDS_BARYON_Q1:
-    prior:
-      min: -3
-      max: 9
-    ref:
-      dist: norm
-      loc: 3
-      scale: 5
-    proposal: 1
-    latex: KIDS_BQ1_\mathrm{KiDS}^1
+    value: 0.0
+    latex: BQ1_\mathrm{KiDS}^1
   KIDS_BARYON_Q2:
     value: 0.0
     latex: BQ2_\mathrm{KiDS}^2
@@ -274,7 +288,7 @@ sampler:
     blocking:
       - [1,
           [
-            As_1e9, ns, H0, omegab, omegam
+            As_1e9, ns, H0, omegab, omegam, w, w0pwa
           ]
         ]
       - [5,
@@ -284,7 +298,7 @@ sampler:
         ]
       - [25,
           [
-            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5, KIDS_BARYON_Q1
+            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5
           ]
         ]
     # ---------------------------------------------------------------------
@@ -301,4 +315,4 @@ sampler:
     # ---------------------------------------------------------------------
     Rminus1_single_split: 4
 
-output: ./projects/kids/chains/EXAMPLE_MCMC2
+output: ./projects/kids/chains/EXAMPLE_MCMC8

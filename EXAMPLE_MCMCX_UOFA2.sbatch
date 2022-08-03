@@ -5,8 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --cpus-per-task=10
-#SBATCH --partition=high_priority
-#SBATCH --qos=user_qos_timeifler
+#SBATCH --partition=standard
 #SBATCH --account=timeifler
 #SBATCH --time=70:00:00
 

@@ -208,4 +208,5 @@ sampler:
       KIDS_M5: 0.0
       KIDS_A1_1: 0.606102
 
+
 output: ./projects/kids/chains/EXAMPLE_EVALUATE1

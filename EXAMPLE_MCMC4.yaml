@@ -5,7 +5,7 @@ stop_at_error: False
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-    data_file: kids_baseline.dataset
+    data_file: kids_baseline_all.dataset
     integration_accuracy: 0 
 
 params:
@@ -175,8 +175,8 @@ params:
     ref:
       dist: norm
       loc: 0.8
-      scale: 0.2
-    proposal: 0.2
+      scale: 0.1
+    proposal: 0.1
     latex: A_\mathrm{1-IA}^1
   KIDS_A1_2:
     value: 0.0
@@ -189,7 +189,7 @@ params:
     latex: A_\mathrm{1-IA}^4
   KIDS_A1_5:
     value: 0.0
-    latex: A_\mathrm{1-IA}^5  
+    latex: A_\mathrm{1-IA}^5
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -215,7 +215,7 @@ params:
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
-
+   
 theory:
   camb:
     path: ./external_modules/code/CAMB
@@ -301,4 +301,4 @@ sampler:
     # ---------------------------------------------------------------------
     Rminus1_single_split: 4
 
-output: ./projects/kids/chains/EXAMPLE_MCMC2
+output: ./projects/kids/chains/EXAMPLE_MCMC4

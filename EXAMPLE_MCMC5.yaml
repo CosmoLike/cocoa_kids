@@ -5,9 +5,9 @@ stop_at_error: False
 likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
-    data_file: kids_baseline.dataset
+    data_file: kids_baseline_des.dataset
     integration_accuracy: 0 
-
+       
 params:
   As_1e9:
     prior:
@@ -189,20 +189,13 @@ params:
     latex: A_\mathrm{1-IA}^4
   KIDS_A1_5:
     value: 0.0
-    latex: A_\mathrm{1-IA}^5  
+    latex: A_\mathrm{1-IA}^5
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   KIDS_BARYON_Q1:
-    prior:
-      min: -3
-      max: 9
-    ref:
-      dist: norm
-      loc: 3
-      scale: 5
-    proposal: 1
-    latex: KIDS_BQ1_\mathrm{KiDS}^1
+    value: 0.0
+    latex: BQ1_\mathrm{KiDS}^1
   KIDS_BARYON_Q2:
     value: 0.0
     latex: BQ2_\mathrm{KiDS}^2
@@ -284,7 +277,7 @@ sampler:
         ]
       - [25,
           [
-            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5, KIDS_BARYON_Q1
+            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5
           ]
         ]
     # ---------------------------------------------------------------------
@@ -301,4 +294,4 @@ sampler:
     # ---------------------------------------------------------------------
     Rminus1_single_split: 4
 
-output: ./projects/kids/chains/EXAMPLE_MCMC2
+output: ./projects/kids/chains/EXAMPLE_MCMC5
