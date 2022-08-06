@@ -6,18 +6,7 @@ likelihood:
   kids.kids_cosmic_shear:
     path: ./external_modules/data/kids
     data_file: kids_baseline_all.dataset
-    integration_accuracy: 0
-    accuracyboost: 1.0
-    samplingboost: 1.0
-    kmax_boltzmann: 10.0
-  des_y3.des_3x2pt:
-    path: ./external_modules/data/des_y3
-    data_file: DES_Y1_all_cs.dataset
-    integration_accuracy: 0
-    accuracyboost: 1.0
-    samplingboost: 1.0
-    kmax_boltzmann: 10.0
-
+    integration_accuracy: 0 
 
 params:
   As_1e9:
@@ -182,10 +171,24 @@ params:
   # ------------------------------------------------------------------------
   # Intrinsic alignment
   KIDS_A1_1:
-    value: 'lambda DES_A1_1: DES_A1_1'
+    prior:
+      min: -5
+      max:  5
+    ref:
+      dist: norm
+      loc: 0.7
+      scale: 0.5
+    proposal: 0.5
     latex: A_\mathrm{1-IA}^1
   KIDS_A1_2:
-    value: 'lambda DES_A1_2: DES_A1_2'
+    prior:
+      min: -5
+      max:  5
+    ref:
+      dist: norm
+      loc: -1.7
+      scale: 0.5
+    proposal: 0.5
     latex: A_\mathrm{1-IA}^2
   KIDS_A1_3:
     value: 0.0
@@ -198,8 +201,15 @@ params:
     latex: A_\mathrm{1-IA}^5
   # ------------------------------------------------------------------------
   KIDS_BARYON_Q1:
-    value: 0.0
-    latex: BQ1_\mathrm{KiDS}^1
+    prior:
+      min: -3
+      max: 9
+    ref:
+      dist: norm
+      loc: 3
+      scale: 5
+    proposal: 1
+    latex: Q1_\mathrm{KiDS}^1
   KIDS_BARYON_Q2:
     value: 0.0
     latex: BQ2_\mathrm{KiDS}^2
@@ -216,239 +226,7 @@ params:
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
-  # DES-Y1 3x2 nuissance parameter begins
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  DES_DZ_S1:
-    prior:
-      dist: norm
-      loc: 0.0414632
-      scale: 0.016
-    ref:
-      dist: norm
-      loc: 0.0414632
-      scale: 0.016
-    proposal: 0.005
-    latex: \Delta z_\mathrm{s,DES}^1
-  DES_DZ_S2:
-    prior:
-      dist: norm
-      loc: 0.00147332
-      scale: 0.013
-    ref:
-      dist: norm
-      loc: 0.00147332
-      scale: 0.013
-    proposal: 0.005
-    latex: \Delta z_\mathrm{s,DES}^2
-  DES_DZ_S3:
-    prior:
-      dist: norm
-      loc: 0.0237035
-      scale: 0.011
-    ref:
-      dist: norm
-      loc: 0.0237035
-      scale: 0.011
-    proposal: 0.005
-    latex: \Delta z_\mathrm{s,DES}^3
-  DES_DZ_S4:
-    prior:
-      dist: norm
-      loc: -0.0773436
-      scale: 0.022
-    ref:
-      dist: norm
-      loc: -0.0773436
-      scale: 0.022
-    proposal: 0.005
-    latex: \Delta z_\mathrm{s,DES}^4
-  # ------------------------------------------------------------------------
-  DES_A1_1:
-    prior:
-      min: -5
-      max:  5
-    ref:
-      dist: norm
-      loc: 0.7
-      scale: 0.5
-    proposal: 0.5
-    latex: A_\mathrm{1-IA,DES}^1
-  DES_A1_2:
-    prior:
-      min: -5
-      max:  5
-    ref:
-      dist: norm
-      loc: -1.7
-      scale: 0.5
-    proposal: 0.5
-    latex: A_\mathrm{1-IA,DES}^2
-  DES_A2_1: #TATT, not used for Y1
-    value: 0.0
-    latex: A_\mathrm{2-IA,DES}^1 
-  DES_A2_2: #TATT, not used for Y1
-    value: 0.0
-    latex: A_\mathrm{2-IA,DES}^2
-  DES_BTA_1: #TATT, not used for Y1
-    value: 1.0
-    latex: A_\mathrm{BTA-IA,DES}^1
-  # ------------------------------------------------------------------------
-  DES_M1:
-    prior:
-      dist: norm
-      loc: 0.0191832
-      scale: 0.023
-    ref:
-      dist: norm
-      loc: 0.0191832
-      scale: 0.023
-    proposal: 0.005
-    latex: m_\mathrm{DES}^1
-  DES_M2:
-    prior:
-      dist: norm
-      loc: -0.0431752
-      scale: 0.023
-    ref:
-      dist: norm
-      loc: -0.0431752
-      scale: 0.023
-    proposal: 0.005
-    latex: m_\mathrm{DES}^2
-  DES_M3:
-    prior:
-      dist: norm
-      loc: -0.034961
-      scale: 0.023
-    ref:
-      dist: norm
-      loc: -0.034961
-      scale: 0.023
-    proposal: 0.005
-    latex: m_\mathrm{DES}^3
-  DES_M4:
-    prior:
-      dist: norm
-      loc: -0.0158096
-      scale: 0.023
-    ref:
-      dist: norm
-      loc: -0.0158096
-      scale: 0.023
-    proposal: 0.005
-    latex: m_\mathrm{DES}^4
-  # ------------------------------------------------------------------------
-  # BARYON PCA
-  DES_BARYON_Q1:
-    value: 0.0
-    latex: BQ1_\mathrm{DES}^1
-  DES_BARYON_Q2:
-    value: 0.0
-    latex: BQ2_\mathrm{DES}^2
-  DES_BARYON_Q3:
-    value: 0.0
-    latex: BQ3_\mathrm{DES}^3
-  DES_BARYON_Q4:
-    value: 0.0
-    latex: BQ4_\mathrm{DES}^4
-  # ------------------------------------------------------------------------
-  DES_PM1:
-    value: 0.0
-    latex: PM_\mathrm{DES}^1
-  DES_PM2:
-    value: 0.0
-    latex: PM_\mathrm{DES}^2
-  DES_PM3:
-    value: 0.0
-    latex: PM_\mathrm{DES}^3
-  DES_PM4:
-    value: 0.0
-    latex: PM_\mathrm{DES}^4
-  DES_PM5:
-    value: 0.0
-    latex: PM_\mathrm{DES}^5
-  # ------------------------------------------------------------------------
-  DES_BMAG_1:
-    value: 1.0
-    latex: b_\mathrm{BMAG-DES}^1
-  DES_BMAG_2:
-    value: 1.0
-    latex: b_\mathrm{BMAG-DES}^2
-  DES_BMAG_3:
-    value: 1.0
-    latex: b_\mathrm{BMAG-DES}^3
-  DES_BMAG_4:
-    value: 1.0
-    latex: b_\mathrm{BMAG-DES}^4
-  DES_BMAG_5:
-    value: 1.0
-    latex: b_\mathrm{BMAG-DES}^5
-  # ------------------------------------------------------------------------
-  DES_DZ_L1:
-    prior:
-      dist: norm
-      loc: 0.00457604
-      scale: 0.007
-    ref:
-      dist: norm
-      loc: 0.00457604
-      scale: 0.007
-    proposal: 0.004
-    latex: \Delta z_\mathrm{l,DES}^1
-  DES_DZ_L2:
-    prior:
-      dist: norm
-      loc: 0.000309875
-      scale: 0.007
-    ref:
-      dist: norm
-      loc: 0.000309875
-      scale: 0.007
-    proposal: 0.003
-    latex: \Delta z_\mathrm{l,DES}^2
-  DES_DZ_L3:
-    prior:
-      dist: norm
-      loc: 0.00855907
-      scale: 0.006
-    ref:
-      dist: norm
-      loc: 0.00855907
-      scale: 0.006
-    proposal: 0.003
-    latex: \Delta z_\mathrm{l,DES}^3
-  DES_DZ_L4:
-    prior:
-      dist: norm
-      loc: -0.00316269
-      scale: 0.01
-    ref:
-      dist: norm
-      loc: -0.00316269
-      scale: 0.01
-    proposal: 0.005
-    latex: \Delta z_\mathrm{l,DES}^4
-  DES_DZ_L5:
-    prior:
-      dist: norm
-      loc: -0.0146753
-      scale: 0.01
-    ref:
-      dist: norm
-      loc: -0.0146753
-      scale: 0.01
-    proposal: 0.005
-    latex: \Delta z_\mathrm{l,DES}^5  
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # DES-Y1 3x2 nuissance parameter ends
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-
+   
 theory:
   camb:
     path: ./external_modules/code/CAMB
@@ -510,16 +288,14 @@ sampler:
             As_1e9, ns, H0, omegab, omegam
           ]
         ]
-      - [3,
+      - [5,
           [
-            KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5, DES_DZ_S1, DES_DZ_S2, 
-            DES_DZ_S3, DES_DZ_S4, DES_A1_1, DES_A1_2, DES_B1_1, DES_B1_2, DES_B1_3, DES_B1_4, 
-            DES_B1_5, DES_DZ_L1, DES_DZ_L2, DES_DZ_L3, DES_DZ_L4, DES_DZ_L5,
+            KIDS_DZ_S1, KIDS_DZ_S2, KIDS_DZ_S3, KIDS_DZ_S4, KIDS_DZ_S5, KIDS_A1_1, KIDS_A1_2
           ]
         ]
       - [25,
           [
-            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5, DES_M1, DES_M2, DES_M3, DES_M4
+            KIDS_M1, KIDS_M2, KIDS_M3, KIDS_M4, KIDS_M5, KIDS_BARYON_Q1
           ]
         ]
     # ---------------------------------------------------------------------
@@ -535,44 +311,5 @@ sampler:
     # ---------------------------------------------------------------------
     # ---------------------------------------------------------------------
     Rminus1_single_split: 4
-  
-#  evaluate:
-#    N: 1
-#    override:
-#      As_1e9: 2.1
-#      ns: 0.96605
-#      H0: 67.32
-#      omegab: 0.04
-#      omegam: 0.3
-#      DES_DZ_S1: 0.0414632
-#      DES_DZ_S2: 0.00147332
-#      DES_DZ_S3: 0.0237035
-#      DES_DZ_S4: -0.0773436
-#      DES_M1: 0.0191832
-#      DES_M2: -0.0431752
-#      DES_M3: -0.034961
-#      DES_M4: -0.0158096
-#      DES_A1_1: 0.606102
-#      DES_A1_2: -1.51541
-#      DES_DZ_L1: 0.00457604
-#      DES_DZ_L2: 0.000309875
-#      DES_DZ_L3: 0.00855907
-#      DES_DZ_L4: -0.00316269
-#      DES_DZ_L5: -0.0146753
-#      DES_B1_1: 1.72716
-#      DES_B1_2: 1.65168
-#      DES_B1_3: 1.61423
-#      DES_B1_4: 1.92886
-#      DES_B1_5: 2.11633
-#      KIDS_DZ_S1: -0.001 
-#      KIDS_DZ_S2: 0.004
-#      KIDS_DZ_S3: 0.011 
-#      KIDS_DZ_S4: -0.008 
-#      KIDS_DZ_S5: 0.003
-#      KIDS_M1: 0.0
-#      KIDS_M2: 0.0
-#      KIDS_M3: 0.0
-#      KIDS_M4: 0.0
-#      KIDS_M5: 0.0
 
-output: ./projects/kids/chains/EXAMPLE_MCMC20
+output: ./projects/kids/chains/EXAMPLE_MCMC17

@@ -3,13 +3,6 @@ debug: False
 stop_at_error: False
 
 likelihood:
-  kids.kids_cosmic_shear:
-    path: ./external_modules/data/kids
-    data_file: kids_baseline_all.dataset
-    integration_accuracy: 0
-    accuracyboost: 1.0
-    samplingboost: 1.0
-    kmax_boltzmann: 10.0
   des_y3.des_3x2pt:
     path: ./external_modules/data/des_y3
     data_file: DES_Y1_all_cs.dataset
@@ -17,7 +10,13 @@ likelihood:
     accuracyboost: 1.0
     samplingboost: 1.0
     kmax_boltzmann: 10.0
-
+  kids.kids_cosmic_shear:
+    path: ./external_modules/data/kids
+    data_file: kids_baseline_all.dataset
+    integration_accuracy: 0
+    accuracyboost: 1.0
+    samplingboost: 1.0
+    kmax_boltzmann: 10.0
 
 params:
   As_1e9:
@@ -575,4 +574,4 @@ sampler:
 #      KIDS_M4: 0.0
 #      KIDS_M5: 0.0
 
-output: ./projects/kids/chains/EXAMPLE_MCMC20
+output: ./projects/kids/chains/EXAMPLE_MCMC22
