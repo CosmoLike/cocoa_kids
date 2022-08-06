@@ -6,6 +6,7 @@ likelihood:
   des_y3.des_3x2pt:
     path: ./external_modules/data/des_y3
     data_file: DES_Y1_all_cs.dataset
+    integration_accuracy: 0 
 
 params:
   As_1e9:
@@ -233,7 +234,14 @@ params:
   # ------------------------------------------------------------------------
   # BARYON PCA
   DES_BARYON_Q1:
-    value: 0.0
+    prior:
+      min: -3
+      max: 9
+    ref:
+      dist: norm
+      loc: 3
+      scale: 5
+    proposal: 1
     latex: BQ1_\mathrm{DES}^1
   DES_BARYON_Q2:
     value: 0.0
